@@ -1,0 +1,130 @@
+    :root {
+    --pink-light: #ffb6c1;
+    --pink-dark: #ff8fa3;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to top, #0a0a0a, #1a1a2e);
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  #fireworksCanvas {
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .btn {
+    background: var(--pink-light);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.4);
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    background: var(--pink-dark);
+  }
+
+  .letter {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+    font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 1.5rem;
+    transition: all 0.6s ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  .letter.show {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .letter.hide {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  .signature {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #201f1f;
+  }
+
+  #game {
+    margin-top: 2rem;
+    display: none;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  #game p {
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  #response {
+    margin-top: 1rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  #response.show {
+    opacity: 1;
+  }
+
+  #noBtn {
+    position: absolute;
+  }
+
+  @media (max-width: 480px) {
+    .btn {
+      padding: 0.6rem 1.2rem;
+    }
+
+    .letter {
+      padding: 1.2rem;
+    }
+
+    #noBtn {
+      position: relative;
+      margin-top: 1rem;
+    }
+  }

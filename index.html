@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="index.css">
+  <title>Gungun</title>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <div class="container">
+    <button class="btn" onclick="openLetter()">💌 Open Letter</button>
+    
+    <div class="letter" id="letter">
+      <p><strong>Dear Gungun,</strong></p>
+      <p>Naraz ho Gungun...<br>
+      Sach mein mujhe ab tak ye samajh nahi aaya ki tum kis baat se naraz ho — meri kaunsi baat tumhe buri lagi. Agar maine kuch galat kaha ya kiya ho, toh dil se sorry.</p>
+      <p>Even coding karte waqt bhi tumhare khayal baar-baar aa rahe hain… ki tum kaisi ho, sab theek hai na… kuch zyada toh nahi hua na.</p>
+      <p>Aaj subah jo baat hui uske baad mann aur bhi udaas ho gaya. Main bas yahi chahta hoon ki hum dono har baat ko calmly samjhein aur solve karein — bina misunderstandings ke.</p>
+      <p>Tum bahut special ho mere liye, aur main tumhari khushi aur comfort ko sabse zyada importance deta hoon. Please forgive me agar maine tumhe hurt kiya ho. 💛</p>
+      <p class="signature">— Tumhara Matrix9💛</p>
+    </div>
+
+    <div id="game">
+      <p style="font-size: 20px; color: white; margin-bottom: 10px;">Will you forgive me, Gungun?</p>
+      <button class="btn" onclick="respondYes()">Yes 💛</button>
+      <button class="btn" id="noBtn" onmouseover="moveNo()" onclick="moveNo()">No 😢</button>
+      <p id="response"></p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
